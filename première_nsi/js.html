@@ -1,0 +1,47 @@
+<html>
+    <style>
+        code{display:none;}
+    </style>
+<body>
+    <div id='youpi'>Test grobricolage!</div>
+</body>
+
+<code>     
+
+mod(x):
+    e=7
+
+</code>
+
+<script>
+
+function id(id_name){return document.getElementById(id_name)}
+function cl(class_name){return document.getElementsByClassName(class_name)}
+function tg(tag_name){return document.getElementsByTagName(tag_name)}
+
+
+id("youpi").innerHTML="facile!"
+
+
+function code2js(code)
+{
+    var code=document.getElementsByTagName("code")[0].innerHTML;
+    code=code.replace(/affiche (.*)/g,"console.log($1);");//console.log();
+    code=code.replace(/id\((.*?)\)./g,"document.getElementById($1).");// getElementBy...
+    code=code.replace(/\n(\w)\((.*)\):(.*?)\n\n/gm,"function $1($2){$3}");// fonction
+    code=code.replace(/si (.*?):(.*?)sinon:(.*)/gms,"if($1){$2}else{$3}");
+    //code=code.replace(/pour (\w) dans \[(\d+),(\d+)\]:/g,"for(let $1=$2;$1<$3;$1++):");
+    code=code.replace(/&gt;/g,">");
+    code=code.replace(/&lt;/g,"<");
+
+    code=code.replace(/\s\s/g,"");
+    console.log(code);
+    eval(code);
+}
+
+code2js(tg("code")[0].innerHTML);
+
+</script>
+
+
+</html>

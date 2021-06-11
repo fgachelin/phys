@@ -1,0 +1,243 @@
+body
+{
+  max-width: 800px;
+  margin:auto;
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+  padding: 0 15% 0 15%;
+  color:#234;
+  clear: both;
+}
+
+@media (max-width: 40em)
+{
+  body
+  {
+    max-width: 800px;
+    margin:auto;
+    font-family: Helvetica, arial, sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+    padding: 0 15px 0 15px;
+    color:#234;
+    clear: both;
+  }
+}
+
+
+.titre
+{
+  color:white;
+  padding:0.5em 1000px 0.5em 1000px;
+  margin:0 -1000px 20px -1000px;
+  font-size: 2em;
+  font-weight: 300;
+  line-height: 1;
+  word-wrap: break-word;
+  display:block;
+  background-color: #207090;/*bleu maison*/
+  background-color: #3354a1;/*413 927violet 972brun 297vert 456 ou 567*/
+  /*
+  color:#f1471d; rouge livre
+  background-color:#1fbab0; bleu du livre
+  background-color: #0366d6; bleu github
+  */
+}
+
+h1
+{
+  color:#234;
+  cursor: pointer;
+  font-size: 1.5em;
+  font-weight: 300;
+  line-height: 1.125;
+  word-wrap: break-word;
+  padding-bottom:0.4em;
+  padding-top:0.4em;
+  border-bottom: 0.5px solid #aaa;
+  overflow: auto;/*pour ne pas déborder sur la fleche derouler-replier*/
+}
+
+
+
+h2
+{
+  color: #234;
+  font-size: 1.3em;
+  font-weight: 400;
+  line-height: 1.25;
+  padding:0;
+  word-wrap: break-word;
+}
+
+h3
+{
+  font-size: 1.2em;
+  color: #234;
+  font-weight: 400;
+  margin-bottom:10px;
+}
+
+h4
+{
+  font-size: 1.1em;
+  color: #279;
+  color: #972;
+  color: #927;
+  font-weight: 400;
+  margin-bottom:10px;
+}
+
+a
+{
+  color:#0366d6;
+  text-decoration: none;
+}
+
+div
+{
+  display: flex;
+  word-wrap: break-word;
+}
+
+.cadre
+{
+  display: block;
+  border-left:0.5px solid rgba(175, 85, 167, 0.904);
+  padding-left: 10px;
+}
+
+p
+{
+  word-wrap: break-word;
+}
+
+/* Pages 2 colonnes*/
+.split /* conteneur des colonnes */
+{
+  grid-template-columns: 50% 50%;
+  grid-column-gap: 10px;
+}
+
+.colonne /* deux colonnes */
+{
+  display: flex;
+  flex-direction: column;
+  width:48%;
+}
+
+img
+{
+ width:80%;
+ padding-left:10%;
+}
+
+sub, sup
+{
+  font-size: 0.5em;
+}
+
+b
+{
+  color: #a39;
+}
+
+.encadre
+{
+  border: 1px solid #279;
+  box-shadow: -2px 1px #279;
+  border-radius:3px;
+  padding:10px;
+}
+
+.fleche_droite
+{
+  float:right;
+}
+
+.Qn
+{
+  color: rgb(64, 216, 216);;
+}
+
+small
+{
+  font-size: 0.5em;
+}
+
+/* Reproduction latex */
+.JSmath
+{
+  font-family:'Times New Roman';
+  margin:0px;
+  padding:0px;
+  display:inline;
+  align-items: center;
+  padding:0;
+}
+
+/*  Fraction num/den */
+.element, .num, .den
+{
+  font-size:1em;
+  padding:0;
+  margin:0 0.1em 0 0.1em;
+}
+
+
+/*trait de fraction*/
+.num
+{
+  border-bottom:1px solid black;
+}
+
+
+.fraction
+{
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+  border:1px soid black;
+}
+
+/* plus moins fois ...*/
+.operateur
+{
+  margin:3px;
+}
+
+/* conteneur pour AB> */
+.vecteur
+{
+  flex-direction: column;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  vertical-align: 10px;
+}
+
+.flecheVecteur
+{
+  vertical-align: top;
+  font-size: 1em;
+  padding:0;
+  margin-bottom:-1em;
+}
+
+.nomVecteur
+{
+  font-size:1em;
+  padding:0;
+  margin:0;
+}
+
+.python_en_ligne
+{
+  font-family:Courier;
+  border-radius:0.4em;
+  background-color: #dfdfdf;
+}
